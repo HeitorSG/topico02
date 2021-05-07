@@ -18,7 +18,7 @@ public class Topico02 {
         // TODO code application logic here
         ProgExemplo lex = new ProgExemplo(args[0]);
         Token t = null;
-        while((t = lex.proximoToken()) != null) {
+        while((t = lex.proximoToken()).nome != TipoToken.FIM) {
             System.out.print(t);
         }
     }

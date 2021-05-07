@@ -263,6 +263,25 @@ public class ProgExemplo {
         }
         return null;
     }
+    private Token semicomma(){
+        int caractereLido = ldat.lerProximoCaractere();
+        char c = (char) caractereLido;
+        if(c == ';'){
+            return new Token(TipoToken.SEMICOL, ldat.getLexema());
+        }
+        else if(c == ','){
+            return new Token(TipoToken.COMMA, ldat.getLexema());
+        }
+        else if(c == '"'){
+            return new Token(TipoToken.QM, ldat.getLexema());
+        }
+        else if(c == '?'){
+            return new Token(TipoToken.QUESTM, ldat.getLexema());
+        }
+        else{
+            return null;
+        }
+    }
      
      public Token proximoToken() {
         Token proximo = null;
@@ -275,7 +294,7 @@ public class ProgExemplo {
             ldat.confirmar();
             return proximo;
         }
-        proximo = palavrasChave();
+        proximo = semicomma();
         if (proximo == null) {
             ldat.zerar();
         } else {
