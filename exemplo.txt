@@ -1,0 +1,27 @@
+ini var1(int);
+ini var2(float);
+ini var3(char);
+ini var4(string);
+ini var6(boolean);
+
+var1 + var2;
+var1 - var2;
+var1/var2;
+var1*var2;
+var1**var2;~potencia
+var1//var2;~raiz
+var3 >> var4 >> "text";~~concatenar
+var1 = 15 + 10.5;
+
+function(fn) ->
+~qualquer codigo 
+<-
+
+
+if -> var1 < var2, var1 = var2?
+~qualquer codigo
+<-
+
+while -> var5 > var2?
+~qualquer codigo
+<-              
